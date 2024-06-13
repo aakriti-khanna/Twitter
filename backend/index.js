@@ -9,16 +9,13 @@ import cors from "cors";
 dotenv.config({
     path:".env"
 })
+app.use(express.static("public")) 
 databaseConnection();
 const app = express(); 
 
 // middlewares
 
-app.get("/", (req, res) => { 
-    // get the passed query 
-    
-    res.send("hello"); 
-}); 
+
 app.use(express.urlencoded({
     extended:true
 }));
