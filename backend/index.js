@@ -60,11 +60,11 @@ dotenv.config({
 // Initialize Express app
 const app = express();
 
-// Middleware to serve static files
-app.use(express.static("public"));
-
 // Connect to the database
 databaseConnection();
+
+// Middleware to serve static files
+app.use(express.static("public"));
 
 // Middlewares
 app.use(express.urlencoded({ extended: true }));
